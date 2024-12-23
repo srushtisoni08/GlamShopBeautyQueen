@@ -103,11 +103,36 @@ a{
 }
 .image img:hover{
     transform: scale(1.03);
-    border: 4px groove white;
+    box-shadow: 0px 0px 20px white ;
 }
 .image div{
     padding-top: 10px;
     padding-left: 5px;
     border-radius: 10px;
     cursor: pointer;  
+}
+#know:active{
+    background-color: rgb(238, 238, 238);
+    box-shadow: 0px 0px 15px whitesmoke;
+}
+#start{
+    background-color: #350D20;
+    height: 300px;
+    animation-name: slideright;
+    animation-duration: 2s;
+    transition: ease-out;
+}
+@keyframes slideright{
+    from{transform: translateY(-10%);}
+}
+@keyframes fade{
+    100%{opacity: 0;}
+}
+.girls{
+    display: flex;
+    text-align: center;
+}
+.girls img{
+    height: 500px;
+    width: 600px;
 }
