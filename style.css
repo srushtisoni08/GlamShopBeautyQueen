@@ -38,19 +38,11 @@ body{
 #last{
     background-image: url(do.jpg);
     width: 100%;
-    height: 50px;
+    height:fit-content;
     text-align: center;
     padding-top: 0.1px;
     text-decoration: none;
     font-family:'Times New Roman', Times, serif;
-}
-.icons a{
-    text-decoration: none;
-    padding: 6%;
-}
-.icons img{
-    height: 50px;
-    align-content: center;
 }
 #text{
     animation-name: slideleft;
@@ -118,6 +110,8 @@ a{
 #start{
     background-color: #350D20;
     height: 300px;
+}
+#about{
     animation-name: slideright;
     animation-duration: 2s;
     transition: ease-out;
@@ -128,11 +122,83 @@ a{
 @keyframes fade{
     100%{opacity: 0;}
 }
-.girls{
+.girl{
     display: flex;
     text-align: center;
+    flex-direction: row; /* Stack items vertically */
+    align-items: center; /* Center align items horizontally */
 }
-.girls img{
+.girl p{
+    text-indent: 70px;
+}
+.girl button{
+    height: 50px;
+    width: fit-content;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: rgb(152, 18, 96);
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+.girl button:hover{
+    background-color: rgb(122, 14, 77);
+    text-shadow: 0px 0px 5px whitesmoke;
+    transform: scale(1.02);
+    box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.427);
+}
+.girl img{
     height: 500px;
     width: 600px;
+}
+.review img{
+    height: 300px;
+    width: 300px;
+    border-radius: 20px;
+}
+.review{
+    width: 300px;
+    border-radius: 20px;
+    transition: all 0.1s ease-in-out;
+}
+#girls{
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    padding: 20px 0px 20px 0px;
+}
+.review p{
+    visibility: hidden;
+    transform: translateY(20px); /* Start slightly below */
+    transition: all 0.2s ease-in; 
+}
+.review:hover{
+    box-shadow: 10px 10px 30px #350D20;
+    transform: scale(1.05);
+    transition: all 0.5s ease;
+}
+.review:hover p{
+    visibility: visible;
+    transform: translateY(0);
+}
+#g1:hover{
+    content: url('girl1_1.png');
+    transition: opacity 0.5s ease;
+}
+#g2:hover{
+    content: url('girl2_2.png');
+}
+#g3:hover{
+    content: url('girl3_1.jpg');
+}
+.constraints img{
+    height: 15px;
+    width: 15px;
+}
+.constraints{
+    text-align: left;
+}
+#foot{
+    display: flex;
+    justify-content:space-around;
 }
